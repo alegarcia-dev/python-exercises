@@ -131,7 +131,10 @@ print(f'#1 {len(students)}')
 
 # 2. How many students prefer light coffee? For each type of coffee roast?
 #   3
-print(f'#2 {len([student for student in students if student["coffee_preference"] == "light"])}')
+#   {'medium': 6, 'dark': 5, 'light': 3}
+number_of_each_coffee_preference = Counter(student['coffee_preference'] for student in students)
+print(f'#2 {number_of_each_coffee_preference["light"]}')
+print(f'    {number_of_each_coffee_preference}')
 
 # 3. How many types of each pet are there?
 #   3
