@@ -164,7 +164,7 @@ for i in range(user_input, 0, -1):
 # - For the multiples of five print "Buzz".
 # - For numbers which are multiples of both three and five print "FizzBuzz".
 print('\n#3')
-for i in range(101):
+for i in range(1, 101):
     print(i, end = '\r')
     if i % 3 == 0:
         print('Fizz', end = '')
