@@ -29,7 +29,7 @@ number_of_hours_worked = 63
 hourly_rate = 20.20
 
 if number_of_hours_worked > 40:
-    weekly_paycheck = 40 * hourly_rate + (number_of_hours_worked - 40) * hourly_rate
+    weekly_paycheck = 40 * hourly_rate + (number_of_hours_worked - 40) * hourly_rate * 1.5
 else:
     weekly_paycheck = number_of_hours_worked * hourly_rate
 
