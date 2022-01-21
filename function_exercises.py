@@ -33,7 +33,7 @@ def is_two(n) -> bool:
             Return True if the argument is the string value '2' or int value 2,
             otherwise return False.
     '''
-    return n == '2' or int(n) == 2
+    return n == '2' or n == 2
 
 print(f'# 1')
 print(f'Is "2" two? {is_two("2")}')
@@ -77,6 +77,13 @@ def is_vowel(character: str) -> bool:
     '''
     # First verify the string is not empty, then check if it is a vowel.
     return bool(character) and character.lower() in 'aeiou'
+    
+# def is_vowel(character):
+#     if type(character) == str:
+#         # enforces single character
+#         return character in ['a', 'e', 'i', 'o', 'u']
+#     else:
+#         return False
 
 print(f'\n# 2')
 print(f'Is "a" a vowel? {is_vowel("a")}')
@@ -444,6 +451,7 @@ def normalize_name(invalid_identifier: str) -> str:
             any leading or trailing whitespace, and replace inner whitespace with underscores.
     '''
     # Use remove_invalid_characters function to remove all invalid characters and leading numbers
+    invalid_identifier = str(invalid_identifier)
     removed_invalid_characters = remove_invalid_characters(invalid_identifier.lower())
 
     # Remove leading and trailing whitespace
@@ -492,7 +500,7 @@ def cumulative_sum(list_of_nums: list) -> list:
             Return a list that is a cumulative sum of the elements from the list passed
             as an argument.
     '''
-    return [sum(list_of_nums[0 : index + 1]) for index in range(len(list_of_nums))]
+    return [sum(list_of_nums[ : index + 1]) for index, _ in enumerate(list_of_nums)]
 
 print(f'\n# 11')
 print(f'Cumulative sum of [1, 1, 1]: {cumulative_sum([1, 1 ,1])}')
